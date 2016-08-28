@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   delete '/articles/:id' => 'articles#delete', as: 'article_delete'
   root 'articles#index'
   get 'user/index' => 'user#index'
-  get 'user/index/:user_id' => 'user#show'
+  get 'user/index/:id' => 'user#show', as: 'user_show'
  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
