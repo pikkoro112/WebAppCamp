@@ -1,0 +1,9 @@
+
+<h2>タイトル</h2>
+	<p><%= @article.title %></p>
+<h2>本文</h2>
+	<p><%= @article.body %></p>
+<p><%= link_to "編集", article_edit_path(@article.id) %></p>
+<p><%= link_to "削除", article_delete_path(@article.id), method: 'delete', "data-confirm" => "削除しますがよろしいですか？"  %></p>
+<p><%= link_to "一覧へ戻る", articles_index_path %></p>
+

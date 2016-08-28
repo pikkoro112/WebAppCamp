@@ -1,0 +1,8 @@
+<h1>投稿を編集する</h1>
+<%= form_for (@article) do |f| %>
+	<p>タイトル</p>
+	<p><%= f.text_field :title %></p>
+	<p>本文</p>
+	<p><%= f.text_field :body %></p>
+	<p><%= f.submit "編集を保存" %></p>
+<% end %>

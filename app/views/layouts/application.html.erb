@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WacWeek2Crud</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<% if user_signed_in? %>
+	<%= current_user.email %>さん、こんにちは！
+	<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+<% else %>
+	<%= link_to "サインイン", new_user_registration_path %>　|　
+	<%= link_to "ログイン", new_user_session_path %>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>

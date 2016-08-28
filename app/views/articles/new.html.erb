@@ -1,0 +1,14 @@
+<!-- <h1>Articles#new</h1>
+<p>Find me in app/views/articles/new.html.erb</p>
+ -->
+
+<h1>新規投稿</h1>
+<%= form_for (@article) do |f|%>
+	<p>タイトル</p>
+	<p><%= f.text_field :title %></p>
+	<p>本文</p>
+	<p><%= f.text_field :body %></p>
+	<p><%= f.label :user_id %></p>
+	<p><%= f.collection_select :user_id, User.all, :id, :id %></p>
+	<p><%= f.submit "新規投稿" %></p>
+<% end %>

@@ -1,0 +1,8 @@
+
+<h1>新規投稿する</h1>
+<%= link_to "投稿", articles_new_path %>
+<h1>タイトル一覧</h1>
+<% @articles.each do |a| %>
+	<p>タイトル: <%= link_to a.title, show_path(a.id)  %></p>
+	<p>User ID: <%= a.user_id %></p>
+<% end %>
