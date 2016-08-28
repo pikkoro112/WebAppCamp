@@ -1,4 +1,4 @@
 <p>ユーザ一覧</p>
-<%= @users.each do |u| %>
+<% @users.each do |u| %>
 <p><%= link_to u.email, user_show_path(u.id) %></p>
 <% end %>
